@@ -1,0 +1,181 @@
+Expression: Òdd55ee 22gg77 jj0x1222tt jj09999gxg 909Ò
+
+	Expected:
+		word ÒddÓ
+		number Ò55Ó
+		word ÒeeÓ
+		number Ò22Ó
+		word ÒggÓ
+		number Ò77Ó
+		word ÒjjÓ
+		hex integer Ò0x1222Ó
+		number ÒttÓ
+		word ÒjjÓ
+		octal integer Ò09999Ó
+		word ÒgigÓ
+		number Ò909Ó
+	Actual:
+		word ÒddÓ
+		number Ò55Ó
+		word ÒeeÓ
+		number Ò22Ó
+		word ÒggÓ
+		number Ò77Ó
+		word ÒjjÓ
+		hex integer Ò0x1222Ó
+		number ÒttÓ
+		word ÒjjÓ
+		octal integer Ò09999Ó
+		word ÒgigÓ
+		number Ò909Ó
+
+Expression: Ò0x3 0999 404Ó 
+
+	Expected:
+		hex integer Ó0x3Ó
+		octal integer Ò0999Ó
+		number Ò404Ó
+	Actual:
+		hex integer Ó0x3Ó
+		octal integer Ò0999Ó
+		number Ò404Ó
+
+Expression: Òsizeof(44) busterÓ
+
+	Expected:
+		Òsizeof(44)Ó
+		word ÒbusterÓ	
+	Actual:
+		Òsizeof(44)Ó
+		word ÒbusterÓ
+	
+Expression: Òtestsizeof(33) sizeof(Ó 
+
+	Expected:
+		word ÓtestÓ
+		Òsizeof(33)Ó
+		word ÒsizeofÓ
+		left bracket Ò(Ó
+	Actual:
+		word ÓtestÓ
+		Òsizeof(33)Ó
+		word ÒsizeofÓ
+		left bracket Ò(Ó
+
+Expression: Òbuster 3?true:falseeeÓ
+
+	Expected:	
+		word ÒbusterÓ
+		number Ò3Ó
+		Ò?true:falseÓ
+		word ÒeeÓ
+	Actual:
+		word ÒbusterÓ
+		number Ò3Ó
+		Ò?true:falseÓ
+		word ÒeeÓ
+
+Expression: Ò() [] . -> * & = ~ ++ Ñ- / % + - >> << < > <= >= == != ^ | && || +- -= *= /= %= >>= <<= &= ^= |= ,Ó
+
+	Expected:
+		left bracket Ò(Ò
+		right bracket Ò)Ó
+		left brace Ò[Ò
+		right brace Ò]Ò
+		decimal Ò.Ó
+		structure pointer Ò->Ó
+		multiply Ò*Ó
+		address Ò&Ó
+		equals Ò=Ò
+		1Õs com Ò~Ó
+		inc Ò++Ó
+		dec Ò-ÑÒ
+		divide Ò/Ò
+		modulus Ò%Ó
+		minus Ò-Ò
+		shift right Ò>>Ó
+		left shift Ò<<Ò
+		less than Ò<Ò
+		greater than Ò>Ó
+		less or equal Ò<=Ò
+		greater or equal Ò>=Ó
+		equals equals Ò==Ò
+		not equals Ò!=Ò
+		bitwise xor Ò^Ó
+		bitwise or Ò|Ó
+		logical and Ò&&Ó
+		logical or Ò||Ó
+		plus equals Ò+=Ò
+		subtract equals Ò-=Ó
+		multiply equals Ò*=Ò
+		divide equals Ò/=Ò
+		modulus equals Ò%=Ò
+		shift right equals Ò>>=Ò
+		shift left equals Ò<<=Ò
+		address equals Ò&=Ò
+		bitwise xor equals Ò^=Ò
+		bitwise or equals Ò|=|
+		comma Ò,Ó
+
+
+	
+	Actual:
+		left bracket Ò(Ò
+		right bracket Ò)Ó
+		left brace Ò[Ò
+		right brace Ò]Ò
+		decimal Ò.Ó
+		structure pointer Ò->Ó
+		multiply Ò*Ó
+		address Ò&Ó
+		equals Ò=Ò
+		1Õs com Ò~Ó
+		inc Ò++Ó
+		dec Ò-ÑÒ
+		divide Ò/Ò
+		modulus Ò%Ó
+		minus Ò-Ò
+		shift right Ò>>Ó
+		left shift Ò<<Ò
+		less than Ò<Ò
+		greater than Ò>Ó
+		less or equal Ò<=Ò
+		greater or equal Ò>=Ó
+		equals equals Ò==Ò
+		not equals Ò!=Ò
+		bitwise xor Ò^Ó
+		bitwise or Ò|Ó
+		logical and Ò&&Ó
+		logical or Ò||Ó
+		plus equals Ò+=Ò
+		subtract equals Ò-=Ó
+		multiply equals Ò*=Ò
+		divide equals Ò/=Ò
+		modulus equals Ò%=Ò
+		shift right equals Ò>>=Ò
+		shift left equals Ò<<=Ò
+		address equals Ò&=Ò
+		bitwise xor equals Ò^=Ò
+		bitwise or equals Ò|=|
+		comma Ò,Ó
+
+Expression: Òtest++999Ó
+	Expected:
+		word ÒtestÓ
+		inc Ò++Ó
+		number Ò999Ó
+	Actual:
+		word ÒtestÓ
+		inc Ò++Ó
+		number Ò999Ó
+Expression: Ò//this is a commentÓ
+	Expected:
+ 
+	Actual: 
+Expression: Òtt/*this is commented */ testÓ
+	Expected: 
+		word ÒttÓ
+		word ÒtestÓ
+	Actual: 
+		word ÒttÓ
+		word ÒtestÓ
